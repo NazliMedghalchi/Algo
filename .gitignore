@@ -1,5 +1,5 @@
 #.idea - ignore folder
-.idea/**
+/.idea/**
 
 #.iml file
 *.iml
