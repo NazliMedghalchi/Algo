@@ -37,8 +37,8 @@ public class QuickSort {
         }
 
     }
-    public QuickSort(ArrayList<Integer> input,  int initial, int last, int pivot){
-        partitioning(input, inititi);
+    public QuickSort(ArrayList<Integer> input,  int initial, int last){
+        partitioning(input, initial, last,);
         Collections.addAll(Arrays.asList(input));
 
 
