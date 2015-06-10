@@ -40,7 +40,7 @@ public class Driver {
 
             //Try Pick
             MinHeap myHeap = new MinHeap(result);
-//   
+//
             myHeap.insertToHeap(30);
 
             System.out.println("1st Minimum value:" + myHeap.pop());
