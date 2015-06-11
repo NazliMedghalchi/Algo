@@ -55,8 +55,14 @@ public class Driver {
 
 //            System.out.println(input);
 
-
         // Quick Sort
+            int[] input2 = {11,4,2,14,21,18,32,1};
+            for (int element:input2)
+                System.out.println(element);
+            QuickSort myQuickList = new QuickSort(input2, 0, input2.length);
+            for (int sorted : input2){
+                System.out.println(sorted);
+            }
          // Merge Sort
     }
 

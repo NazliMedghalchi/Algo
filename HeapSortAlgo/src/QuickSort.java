@@ -5,12 +5,12 @@ import java.util.*;
  */
 public class QuickSort {
     ArrayList<Integer> myQuickArray = new ArrayList<Integer>();
-    int pivot;
+//    int pivot;
 
     public void swapValue(int first, int second){
 
     }
-    public QuickSort(int[] input, int i, int r) {
+    public QuickSort(ArrayList<Integer> input, int i, int r) {
 
     }
 
@@ -18,29 +18,32 @@ public class QuickSort {
      * using last element as pivot creates mixture of good and and
      * bad splits at the same time which will be run at O(nlgn)
      */
-    public void partitioning(int[] input , int begin, int end){
-        int j = 1; //j traverses from right to left
-        Random random = new Random();
+    public int partitioning(int begin, int end){
+//        Random random = new Random();
         // pivot is chosen randomly therefore it is balanced partitioning
         //Faster O(n)
-        int r = random.nextInt(input.length);
-        int p = 0;
-        int i = p-1; //i is traversing from left to right
-        int pivotValue = input[r];
-        while (i < j){
-            if (input[p] > pivotValue){
-                i++;
-                swapValue(input[i], input[j]);
+//        int r = random.nextInt(myQuickArray.size());
+        int r = end;
+        int p = begin;
+        int j; //righ-hand side of splitter
+        int i = p-1; //i left-hand side of splitter
+        int pivotValue = myQuickArray.get(r);
+        for (j = 0; j<end -1; j++){
+            if (myQuickArray.get(j) < pivotValue){
+                swapValue(myQuickArray.get(++i), myQuickArray.get(j));
             }
-            j++;
-
         }
-
+        swapValue(myQuickArray.get(i+1), pivotValue);
+        return i+1;
     }
-    public QuickSort(ArrayList<Integer> input,  int initial, int last){
-        partitioning(input, initial, last,);
-        Collections.addAll(Arrays.asList(input));
-
+    public QuickSort(int[] input,  int initial, int last){
+        for (int itr : input){
+            myQuickArray.add(itr, input[itr]);
+        }
+        int pivotIndex = partitioning(initial, last);
+//        Collections.addAll(Arrays.asList(input));
+        new QuickSort(input, initial, pivotIndex);
+        new QuickSort(input, pivotIndex, last);
 
     }
 }
