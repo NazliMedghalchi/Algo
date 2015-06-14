@@ -13,26 +13,28 @@ public class MinHeap{
 //        private int maxSize;
 //        private int currentSize;
 
-        public void insertToHeap(int input) { //adding works, bubbleUp is working
+        public ArrayList<Integer> insertToHeap(int input) { //adding works, bubbleUp is working
                 myArrayList.add(input);
                 bubbleUp(myArrayList.size()-1);
-                for (int element : myArrayList){
+                for (Integer element : myArrayList){
                         System.out.println(element);
                 }
+                return myArrayList;
         }
         //bubbleDown ArrayList
 
-        public int pick(int root, int value){
-                if (myArrayList.get(root) == value) {
-                       return root; //couldn't find
+        //Look for value ---starting from root=0
+        public int pick(int value){
+                int root;
+                for (root =0; root < myArrayList.size(); root++){
+                        if (value == myArrayList.get(root)){
+                                return root;
+                        }
                 }
-                else if (root > myArrayList.size()){
-                        //&& myArrayList.get(root) != value
-                        System.out.println("Not Found!");
-                        return myArrayList.size();
+                if (root == myArrayList.size()){
+                        System.out.println("Doesn't exist!");
                 }
-                return pick(++root, value);
-
+                return -1;
         }
         public void bubbleDown(int index){
         // given index, bubble down the value to its correct place below

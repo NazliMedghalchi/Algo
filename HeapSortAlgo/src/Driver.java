@@ -31,7 +31,7 @@ public class Driver {
             //Use non static method w/defined obj of the class Driver
             MinHeap myHeap = new MinHeap(input);
             myHeap.insertToHeap(30);
-            int location = myHeap.pick(12);
+            int location = myHeap.pick(60);
             System.out.println(location);
 
             Driver myDriver = new Driver();
