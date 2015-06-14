@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b477f4d6-8713-4029-9198-a1cbf6caaa96" name="Default" comment="Pick an element from heap data structure - using for + if">
-      <change type="DELETED" beforePath="C:\Users\Nazli\Documents\codingPractice\JavaPractice\HeapSortAlgo\out\production\HeapSortAlgo\QuickSort.class" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Nazli\Documents\codingPractice\JavaPractice\HeapSortAlgo\src\QuickSort.java" afterPath="$PROJECT_DIR$/src/Quick.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HeapSortAlgo/HeapSort.class" afterPath="$PROJECT_DIR$/out/production/HeapSortAlgo/HeapSort.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HeapSortAlgo/MinHeap.class" afterPath="$PROJECT_DIR$/out/production/HeapSortAlgo/MinHeap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Driver.java" afterPath="$PROJECT_DIR$/src/Driver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HeapSort.java" afterPath="$PROJECT_DIR$/src/HeapSort.java" />
+    <list default="true" id="b477f4d6-8713-4029-9198-a1cbf6caaa96" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HeapSortAlgo/Driver.class" afterPath="$PROJECT_DIR$/out/production/HeapSortAlgo/Driver.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MinHeap.java" afterPath="$PROJECT_DIR$/src/MinHeap.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -63,8 +58,8 @@
       <file leaf-file-name="MinHeap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MinHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.69455254">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.23151751">
+              <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
               <folding>
                 <element signature="e#271#280#0" expanded="true" />
               </folding>
@@ -484,7 +479,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434319005342</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Pick  - a value which does not not exist">
+      <created>1434319714971</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1434319714971</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -498,17 +499,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1918" height="1030" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.49783784" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30715123" sideWeight="0.48486486" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32942554" sideWeight="0.5227027" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32942554" sideWeight="0.5064865" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.49567568" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32942554" sideWeight="0.4772973" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32942554" sideWeight="0.49351352" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.4772973" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.49567568" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18108109" sideWeight="0.493007" order="0" side_tool="false" content_ui="combo" />
@@ -566,14 +567,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Pick an element from heap data structure - using for + if" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pick an element from heap data structure - using for + if" />
+    <MESSAGE value="Pick  - a value which does not not exist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pick  - a value which does not not exist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/MinHeap.java</url>
-          <line>88</line>
+          <line>91</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
@@ -1046,8 +1048,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MinHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69455254">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.23151751">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
           <folding>
             <element signature="e#271#280#0" expanded="true" />
           </folding>

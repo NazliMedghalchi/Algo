@@ -23,19 +23,22 @@ public class MinHeap{
         }
         //bubbleDown ArrayList
 
-        //Look for value ---starting from root=0
-        public int pick(int value){
-                int root;
-                for (root =0; root < myArrayList.size(); root++){
-                        if (value == myArrayList.get(root)){
-                                return root;
-                        }
-                }
-                if (root == myArrayList.size()){
-                        System.out.println("Doesn't exist!");
-                }
-                return -1;
-        }
+        //Look for a Value --- BST
+        public void pick (int )
+
+        //Look for value --- Non recursion method
+//        public int pick(int value){
+//                int root;
+//                for (root =0; root < myArrayList.size(); root++){
+//                        if (value == myArrayList.get(root)){
+//                                return root;
+//                        }
+//                }
+//                if (root == myArrayList.size()){
+//                        System.out.println("Doesn't exist!");
+//                }
+//                return -1;
+//        }
         public void bubbleDown(int index){
         // given index, bubble down the value to its correct place below
 
