@@ -7,10 +7,10 @@ import java.util.*;
 import java.util.concurrent.SynchronousQueue;
 
 public class Driver {
-
         //Get the array
         //use heap data structure to find min values
-        //print sorted array
+        // print sorted array
+        // Method HeapSort works --- sort an given array using Heap dara structure
         public int[] HeapSort(int[] input){
             int[] sortedArray = new int[input.length];
             MinHeap myMinHeap = new MinHeap(input);
@@ -24,10 +24,16 @@ public class Driver {
 
         public static void main(String[] args) {
             System.out.println("hello world");
-            int[] input = {14,15,12,13,20,17,16,11};
-//          HeapSort sortME = new HeapSort(input);
+            int[] input = new int[]{14,15,12,13,20,17,16,11};
+            int[] input2 = {11,4,2,14,21,18,32,1};
+
             //Using MinHeap Class pop all elements
             //Use non static method w/defined obj of the class Driver
+            MinHeap myHeap = new MinHeap(input);
+            myHeap.insertToHeap(30);
+            int location = myHeap.pick(12);
+            System.out.println(location);
+
             Driver myDriver = new Driver();
             int[] result  = myDriver.HeapSort(input);
             System.out.println("Sorted array:");
@@ -39,9 +45,6 @@ public class Driver {
             System.out.println(Arrays.toString(result));
 
             //Try Pick
-            MinHeap myHeap = new MinHeap(result);
-//
-            myHeap.insertToHeap(30);
 
             System.out.println("1st Minimum value:" + myHeap.pop());
             System.out.println("2nd Minimum value:" + myHeap.pop());
@@ -53,17 +56,19 @@ public class Driver {
             System.out.println("8th Minimum value:" + myHeap.pop());
             System.out.println("8th Minimum value:" + myHeap.pop());
 
-//            System.out.println(input);
+            System.out.println(Arrays.toString(input));
 
         // Quick Sort
-            int[] input2 = {11,4,2,14,21,18,32,1};
-            for (int element:input2)
-                System.out.println(element);
-            QuickSort myQuickList = new QuickSort(input2, 0, input2.length);
-            for (int sorted : input2){
-                System.out.println(sorted);
-            }
+//            ArrayList<Integer> quickSorted = new ArrayList<Integer>();
+//            System.out.println(Arrays.toString(input2));
+//            List<Integer> myQuickList = new ArrayList<Integer>();
+
+
+//            quickSorted.set(myQuickList.QuickSort(0, input2.length));
+//            System.out.println((result));
+
          // Merge Sort
+
     }
 
 }
