@@ -23,10 +23,10 @@ public class MinHeap{
         }
         //bubbleDown ArrayList
 
-        //Look for a Value --- BST
+        //Look for a Value --- Recursion method
         public void pick (int )
 
-        //Look for value --- Non recursion method
+        //Look for value --- Iteration method
 //        public int pick(int value){
 //                int root;
 //                for (root =0; root < myArrayList.size(); root++){
