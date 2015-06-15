@@ -140,6 +140,10 @@ public class MinHeap {
                 return minimum;
         }
 
+        //return minimum value
+        public int minimum(){
+                return myArrayList.get(0);
+        }
         //Construct MinHeap
         public MinHeap(int[] input) {
                 // constructor for arrayList
