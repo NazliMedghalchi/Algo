@@ -13,6 +13,17 @@ public class MinHeap{
 //        private int maxSize;
 //        private int currentSize;
 
+        // Method HeapSort works --- sort an given array using Heap data structure
+        public int[] HeapSort(int[] input){
+                int[] sortedArray = new int[input.length];
+                MinHeap myMinHeap = new MinHeap(input);
+                int itr =0;
+                while (itr < input.length) {
+                        sortedArray[itr] = myMinHeap.pop();
+                        itr++;
+                }
+                return sortedArray;
+        }
         public ArrayList<Integer> insertToHeap(int input) { //adding works, bubbleUp is working
                 myArrayList.add(input);
                 bubbleUp(myArrayList.size()-1);
@@ -21,24 +32,35 @@ public class MinHeap{
                 }
                 return myArrayList;
         }
-        //bubbleDown ArrayList
 
-        //Look for a Value --- Recursion method
-        public void pick (int )
-
+        //Look for a Value --- Recursive method
+        public int pickBST (int pos, int value) {
+                if (myArrayList.get(pos) == value) {
+                        System.out.println(pos);
+                        return pos;
+                }
+                else if (pos < myArrayList.size()) {
+                        pickBST(leftChild(pos), value);
+                        pickBST(rightChild(pos), value);
+                }
+                return myArrayList.size();
+        }
         //Look for value --- Iteration method
-//        public int pick(int value){
-//                int root;
-//                for (root =0; root < myArrayList.size(); root++){
-//                        if (value == myArrayList.get(root)){
-//                                return root;
-//                        }
-//                }
+        public int pick(int value){
+                int root;
+                for (root =0; root < myArrayList.size(); root++){
+                        if (value == myArrayList.get(root)){
+                                System.out.println("Founded at:"+ root);
+                                return root;
+                        }
+                }
 //                if (root == myArrayList.size()){
 //                        System.out.println("Doesn't exist!");
 //                }
-//                return -1;
-//        }
+                return -1;
+        }
+
+        //bubbleDown ArrayList
         public void bubbleDown(int index){
         // given index, bubble down the value to its correct place below
 

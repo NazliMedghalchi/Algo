@@ -1,26 +1,17 @@
 /**
  * Created by Nazli on 2015-05-13.
  */
+/**
+ * Get the array
+ * use heap data structure to find min values
+ * print sorted array
+ */
 import io.netty.handler.codec.haproxy.HAProxyCommand;
 
 import java.util.*;
 import java.util.concurrent.SynchronousQueue;
 
 public class Driver {
-        //Get the array
-        //use heap data structure to find min values
-        // print sorted array
-        // Method HeapSort works --- sort an given array using Heap dara structure
-        public int[] HeapSort(int[] input){
-            int[] sortedArray = new int[input.length];
-            MinHeap myMinHeap = new MinHeap(input);
-            int itr =0;
-            while (itr < input.length) {
-                sortedArray[itr] = myMinHeap.pop();
-                itr++;
-            }
-            return sortedArray;
-        }
 
         public static void main(String[] args) {
             System.out.println("hello world");
@@ -31,11 +22,14 @@ public class Driver {
             //Use non static method w/defined obj of the class Driver
             MinHeap myHeap = new MinHeap(input);
             myHeap.insertToHeap(30);
-            int location = myHeap.pick(60);
-            System.out.println(location);
-
-            Driver myDriver = new Driver();
-            int[] result  = myDriver.HeapSort(input);
+            myHeap.insertToHeap(21);
+            myHeap.insertToHeap(9);
+            myHeap.pick(30);
+            myHeap.pick(9);
+//            myHeap.pickBST(0, 14));
+            
+//            Driver myDriver = new Driver();
+            int[] result  = myHeap.HeapSort(input);
             System.out.println("Sorted array:");
             for (int i : result){
                 System.out.println(i);
