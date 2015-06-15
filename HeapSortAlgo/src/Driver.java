@@ -24,22 +24,20 @@ public class Driver {
             myHeap.insertToHeap(30);
             myHeap.insertToHeap(21);
             myHeap.insertToHeap(9);
+            myHeap.displayHeap();
+            //Try Pick --- Iteration
             myHeap.pick(30);
             myHeap.pick(9);
+            myHeap.pick(100);
 //            myHeap.pickBST(0, 14));
-            
-//            Driver myDriver = new Driver();
+
             int[] result  = myHeap.HeapSort(input);
-            System.out.println("Sorted array:");
+            System.out.print("Sorted array:");
             for (int i : result){
-                System.out.println(i);
+                System.out.print(" " + i);
             }
-
            //Convert array of int to String
-            System.out.println(Arrays.toString(result));
-
-            //Try Pick
-
+            System.out.println("\n" +Arrays.toString(result));
             System.out.println("1st Minimum value:" + myHeap.pop());
             System.out.println("2nd Minimum value:" + myHeap.pop());
             System.out.println("3rd Minimum value:" + myHeap.pop());
@@ -48,8 +46,9 @@ public class Driver {
             System.out.println("6th Minimum value:" + myHeap.pop());
             System.out.println("7th Minimum value:" + myHeap.pop());
             System.out.println("8th Minimum value:" + myHeap.pop());
-            System.out.println("8th Minimum value:" + myHeap.pop());
-
+            System.out.println("9th Minimum value:" + myHeap.pop());
+            System.out.println("10th Minimum value:" + myHeap.pop());
+            System.out.println("11th Minimum value:" + myHeap.pop());
             System.out.println(Arrays.toString(input));
 
         // Quick Sort

@@ -7,57 +7,58 @@
 import javax.management.ValueExp;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
-public class MinHeap{
+public class MinHeap {
         private ArrayList<Integer> myArrayList = new ArrayList<Integer>(Arrays.asList());
 //        private int maxSize;
 //        private int currentSize;
 
         // Method HeapSort works --- sort an given array using Heap data structure
-        public int[] HeapSort(int[] input){
+        public int[] HeapSort(int[] input) {
                 int[] sortedArray = new int[input.length];
                 MinHeap myMinHeap = new MinHeap(input);
-                int itr =0;
+                int itr = 0;
                 while (itr < input.length) {
                         sortedArray[itr] = myMinHeap.pop();
                         itr++;
                 }
                 return sortedArray;
         }
-        public ArrayList<Integer> insertToHeap(int input) { //adding works, bubbleUp is working
-                myArrayList.add(input);
-                bubbleUp(myArrayList.size()-1);
-                for (Integer element : myArrayList){
+
+        public void displayHeap (){
+                for (Integer element : myArrayList) {
                         System.out.println(element);
                 }
+        }
+        public ArrayList<Integer> insertToHeap( int input){ //adding works, bubbleUp is working
+                myArrayList.add(input);
+                bubbleUp(myArrayList.size() - 1);
                 return myArrayList;
         }
 
         //Look for a Value --- Recursive method
-        public int pickBST (int pos, int value) {
+        public int pickBST(int pos, int value) {
                 if (myArrayList.get(pos) == value) {
                         System.out.println(pos);
                         return pos;
                 }
-                else if (pos < myArrayList.size()) {
-                        pickBST(leftChild(pos), value);
-                        pickBST(rightChild(pos), value);
-                }
+                pickBST(leftChild(pos), value);
+                pickBST(rightChild(pos), value);
                 return myArrayList.size();
         }
         //Look for value --- Iteration method
         public int pick(int value){
                 int root;
-                for (root =0; root < myArrayList.size(); root++){
-                        if (value == myArrayList.get(root)){
+                for (root =0; root < myArrayList.size(); ++root){
+                        if (value == myArrayList.get(root)){ //Found the value in Heap?
                                 System.out.println("Founded at:"+ root);
                                 return root;
                         }
                 }
-//                if (root == myArrayList.size()){
-//                        System.out.println("Doesn't exist!");
-//                }
-                return -1;
+                //Couldn't find it?
+                System.out.println("Doesn't exist!" + value);
+                return value;
         }
 
         //bubbleDown ArrayList
