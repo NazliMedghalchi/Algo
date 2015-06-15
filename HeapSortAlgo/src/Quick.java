@@ -1,17 +1,16 @@
-import java.util.*;
-
-
 /**
  * Created by Nazli on 2015-06-08.
  */
+
+import java.util.*;
+
 public class Quick {
     ArrayList<Integer> myQuickArray = new ArrayList<Integer>();
 //    int pivot;
 
     private void swapValue(int source, int destination){
-        int temp = source;
-        source = destination;
-        destination= temp;
+        myQuickArray.set(source, myQuickArray.get(destination));
+        myQuickArray.set(destination, myQuickArray.get(source));
     }
 
     private int partitioning(int begin, int end){
@@ -24,26 +23,24 @@ public class Quick {
         int j; //right-hand side of splitter
         int i = p-1; //i left-hand side of splitter
         int pivotValue = myQuickArray.get(r);
-        for (j = 0; j<end -1; j++){
+        for (j = 0; j<end -2; j++){
             if (myQuickArray.get(j) < pivotValue){
-//                swapValue(myQuickArray.get(++i), myQuickArray.get(j));
-                Collections.swap(myQuickArray, ++i, j);
+                swapValue(myQuickArray.get(++i), myQuickArray.get(j));
+//                Collections.swap(myQuickArray, ++i, j);
             }
         }
         swapValue(myQuickArray.get(i+1), pivotValue);
         return i+1;
     }
 
-    public ArrayList<Integer> QuickSort(int initial, int last){
+    public void QuickSort(int initial, int last){
         int pivotIndex = partitioning(initial, last);
         QuickSort(initial, pivotIndex);
         QuickSort(pivotIndex, last);
-        return myQuickArray;
     }
     public Quick(int[] input){
         for (int itr : input){
             myQuickArray.add(itr);
         }
-        QuickSort(0, input.length - 1);
     }
 }

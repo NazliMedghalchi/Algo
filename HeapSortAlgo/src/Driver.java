@@ -52,13 +52,8 @@ public class Driver {
             System.out.println(Arrays.toString(input));
 
         // Quick Sort
-//            ArrayList<Integer> quickSorted = new ArrayList<Integer>();
-//            System.out.println(Arrays.toString(input2));
-//            List<Integer> myQuickList = new ArrayList<Integer>();
-
-
-//            quickSorted.set(myQuickList.QuickSort(0, input2.length));
-//            System.out.println((result));
+            Quick myQuick = new Quick(input2);
+            myQuick.QuickSort(0, input2.length-1);
 
          // Merge Sort
 
