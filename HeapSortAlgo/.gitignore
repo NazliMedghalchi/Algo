@@ -1,0 +1,9 @@
+#.idea - ignore folder
+
+.idea/*
+
+
+#.iml file
+
+*.iml
+
