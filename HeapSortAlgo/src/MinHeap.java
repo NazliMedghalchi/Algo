@@ -131,7 +131,7 @@ public class MinHeap {
         }
 
         //Delete Min value from root
-        public int pop(){ //pop() is working correctly
+        public int pop(){ //Extract min value from Heap
                 int minimum = myArrayList.get(0);
                 myArrayList.set(0, myArrayList.get(myArrayList.size()-1));
                 myArrayList.set(myArrayList.size() - 1, myArrayList.get(0));
