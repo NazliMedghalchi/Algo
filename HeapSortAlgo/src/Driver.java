@@ -16,7 +16,7 @@ public class Driver {
         public static void main(String[] args) {
             System.out.println("hello world");
             int[] input = new int[]{14,15,12,13,20,17,16,11};
-            int[] input2 = {11,4,2,14,21,18,32,1};
+            int[] input2 = {11,4,2,14,21,18,32};
 
             //Using MinHeap Class pop all elements
             //Use non static method w/defined obj of the class Driver
@@ -24,6 +24,7 @@ public class Driver {
             myHeap.insertToHeap(30);
             myHeap.insertToHeap(21);
             myHeap.insertToHeap(9);
+            System.out.println("Heap after sorting:");
             myHeap.displayHeap();
             //Try Pick --- Iteration
             myHeap.pick(30);
@@ -38,6 +39,8 @@ public class Driver {
             }
            //Convert array of int to String
             System.out.println("\n" +Arrays.toString(result));
+
+            System.out.println(myHeap.minimum());
             System.out.println("1st Minimum value:" + myHeap.pop());
             System.out.println("2nd Minimum value:" + myHeap.pop());
             System.out.println("3rd Minimum value:" + myHeap.pop());
@@ -53,10 +56,12 @@ public class Driver {
 
         // Quick Sort
             Quick myQuick = new Quick(input2);
-            myQuick.QuickSort(0, input2.length-1);
+            System.out.println(myQuick.myQuickArray);
+//            myQuick.QuickSort(0, input2.length - 1);
+            myQuick.recurseHoareQuick(0, input2.length);
+            System.out.println(Arrays.asList(myQuick.myQuickArray));
 
          // Merge Sort
 
     }
-
 }
