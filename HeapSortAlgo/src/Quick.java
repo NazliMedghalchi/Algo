@@ -52,22 +52,25 @@ public class Quick {
     public int hoarPartition(int initial, int end){
         int left = initial-1;
         int right = end +1;
-        Integer pivot = myQuickArray.get(initial);
-        if (myQuickArray.get(left) < pivot ){
+        int mid = end - initial;
+        Integer pivot = myQuickArray.get(mid);
+        if (myQuickArray.get(++left) <= pivot ){
             left++;
         }
-        if (myQuickArray.get(right) >= pivot){
+        if (myQuickArray.get(--right) > pivot){
             right--;
         }
         if (left < right){
-            Collections.swap(myQuickArray, left , right);
+            Collections.swap(myQuickArray, left++ , right--);
+//            left++;
+//            right--;
         }
         return right;
     }
 
     public void recurseHoareQuick(int begin, int end){
         Integer pivot = hoarPartition(begin, end);
-        if (pivot -1 > begin){
+        if (begin < pivot -1){
             recurseHoareQuick(begin, pivot - 1);
         }
         else if (pivot < end){
