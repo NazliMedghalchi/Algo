@@ -6,10 +6,8 @@
  * use heap data structure to find min values
  * print sorted array
  */
-import io.netty.handler.codec.haproxy.HAProxyCommand;
 
 import java.util.*;
-import java.util.concurrent.SynchronousQueue;
 
 public class Driver {
 
@@ -58,10 +56,8 @@ public class Driver {
             Quick myQuick = new Quick(input2);
             System.out.println("After Quick Sort:" + myQuick.myQuickArray);
 //            myQuick.QuickSort(0, input2.length - 1);
-            myQuick.recurseHoareQuick(0, input2.length-1);
-           for (Integer num : myQuick.myQuickArray){
-                System.out.println(num);
-            }
+//            myQuick.recurseHoarQuick(0, input2.length - 1);
+
 
          // Merge Sort
 

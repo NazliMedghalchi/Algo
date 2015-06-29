@@ -16,12 +16,12 @@ public class Quick {
     ArrayList<Integer> myQuickArray = new ArrayList<Integer>();
 //    int pivot;
 
-//    private void swapValue(int source, int destination){
-////        int temp = source;
-//        Collections.swap(myQuickArray, source, destination);
-////        myQuickArray.set(source, myQuickArray.get(destination));
-////        myQuickArray.set(destination, myQuickArray.get(source));
-//    }
+    private void swapValue(int source, int destination){
+//        int temp = source;
+        Collections.swap(myQuickArray, source, destination);
+//        myQuickArray.set(source, myQuickArray.get(destination));
+//        myQuickArray.set(destination, myQuickArray.get(source));
+    }
 
     private int partitioning(int begin, int end){
 //     pivot is chosen randomly therefore it is balanced partitioning
@@ -49,38 +49,32 @@ public class Quick {
 //    }
 
 //Recursion Hoar QuickSort Algorithm --- In-place
-    public int hoarPartition(int initial, int end){
-        int left = initial-1;
+    public int hoarPartition(int initial, int end) {
+        int left = initial - 1;
         int right = end +1;
-        int mid = end - initial;
-        Integer pivot = myQuickArray.get(mid);
-        if (myQuickArray.get(++left) <= pivot ){
-            left++;
-        }
-        if (myQuickArray.get(--right) > pivot){
-            right--;
-        }
-        if (left < right){
-            Collections.swap(myQuickArray, left++ , right--);
-//            left++;
-//            right--;
+        int mid = (end = initial)/2;
+        int pivot = myQuickArray.get(end);
+        while (left < right) {
+            if (myQuickArray.get(left + 1) <= pivot) {
+                left++;
+            }
+            if (myQuickArray.get(right - 1) > pivot) {
+                right--;
+            }
+            Collections.swap(myQuickArray, left, end);
         }
         return right;
     }
-
-    public void recurseHoareQuick(int begin, int end){
-        Integer pivot = hoarPartition(begin, end);
-        if (begin < pivot -1){
-            recurseHoareQuick(begin, pivot - 1);
-        }
-        else if (pivot < end){
-            recurseHoareQuick(pivot, end);
-        }
+    public void recurseHoarQuick(int begin, int end){
+        int pIndex = hoarPartition(begin, end);
+        recurseHoarQuick(begin, pIndex - 1);
+        recurseHoarQuick(pIndex, end);
     }
     public Quick(int[] input){
         for (int itr : input){
             myQuickArray.add(itr);
         }
+        recurseHoarQuick(0, input.length - 1);
         Arrays.asList(myQuickArray);
     }
 }
