@@ -14,39 +14,40 @@ import java.util.Collections;
 
 public class Quick {
     ArrayList<Integer> myQuickArray = new ArrayList<Integer>();
-    private void swapValue(int source, int destination){
-        Collections.swap(myQuickArray, source, destination);
+    public Quick(int[] input){
+        for (Integer itr : input){
+            myQuickArray.add(itr);
+        }
+        recurseHoarQuick(0, myQuickArray.size() - 1); //switch input.length to myQuickArray.size
+        Arrays.asList(myQuickArray);
     }
-
 //Recursion Hoar QuickSort Algorithm --- In-place
     public int hoarPartition(int initial, int end) {
-        int left = initial - 1;
-        int right = end-1;
-//        int mid = (end = initial)/2;
+        int left = initial-1;
+        int right = end;
         int pivot = myQuickArray.get(end);
-        if (left < right) {
-            while (myQuickArray.get(left + 1) <= pivot) {
+        while (left <= right){
+            do {
                 left++;
-            }
-            while (myQuickArray.get(right) > pivot) {
+            }while ((myQuickArray.get(left) < pivot));
+            do{
                 right--;
+            }while (myQuickArray.get(right) >= pivot);
+            if (left < right){
+                Collections.swap(myQuickArray, left, right);
             }
         }
-        else if (left == right) {
-            Collections.swap(myQuickArray, left, end);
-        }
+        System.out.println("PARTITONED!!");
         return right;
     }
     public void recurseHoarQuick(int begin, int end){
         int pIndex = hoarPartition(begin, end);
-        recurseHoarQuick(begin, pIndex);
-        recurseHoarQuick(pIndex+1, end);
-    }
-    public Quick(int[] input){
-        for (int itr : input){
-            myQuickArray.add(itr);
+        if (begin <= pIndex -1){
+            recurseHoarQuick(begin, pIndex);
         }
-        recurseHoarQuick(0, myQuickArray.size()- 1); //switch input.length to myQuickArray.size
-//     Arrays.asList(myQuickArray);
+        if (end > pIndex) {
+            recurseHoarQuick(pIndex+1, end);
+        }
     }
+
 }
