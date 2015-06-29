@@ -53,11 +53,9 @@ public class Driver {
             System.out.println(Arrays.toString(input));
 
         // Quick Sort
+            System.out.println("After Quick Sort:" );
             Quick myQuick = new Quick(input2);
-            System.out.println("After Quick Sort:" + myQuick.myQuickArray);
-//            myQuick.QuickSort(0, input2.length - 1);
-//            myQuick.recurseHoarQuick(0, input2.length - 1);
-
+            myQuick.recurseHoarQuick(0, input2.length - 1);
 
          // Merge Sort
 
