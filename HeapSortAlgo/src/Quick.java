@@ -2,7 +2,7 @@
  * Created by Nazli on 2015-06-08.
  */
 /**
- * Splitter is between i and j
+ * Splitter is between i and j (left and right)
  * Which at the end of algorithm splitter is at right-hand side of pivot
  * All  values at left-hand side of splitter have less value than pivot
  * Right-hand side, all are greater vlaues
@@ -11,6 +11,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Random;
 
 public class Quick {
     ArrayList<Integer> myQuickArray = new ArrayList<Integer>();
@@ -18,36 +19,44 @@ public class Quick {
         for (Integer itr : input){
             myQuickArray.add(itr);
         }
-        recurseHoarQuick(0, myQuickArray.size() - 1); //switch input.length to myQuickArray.size
-        Arrays.asList(myQuickArray);
+    }
+    private void swapValue (int src, int des){
+        int temp;
+        temp = myQuickArray.get(src);
+        myQuickArray.set(src, myQuickArray.get(des));
+        myQuickArray.set(des, temp);
     }
 //Recursion Hoar QuickSort Algorithm --- In-place
-    public int hoarPartition(int initial, int end) {
+    private int hoarPartition(int initial, int end) {
         int left = initial-1;
-        int right = end;
-        int pivot = myQuickArray.get(end);
+        int right = +1;
+//        Random rand = new Random();
+//        int pIndex  = rand.nextInt((end - initial)+1) + initial;
+        Integer pivot = myQuickArray.get(end);
         while (left <= right){
-            do {
+            while (myQuickArray.get(left) < pivot) {
                 left++;
-            }while ((myQuickArray.get(left) < pivot));
-            do{
+            }
+            if (myQuickArray.get(right) > pivot){
                 right--;
-            }while (myQuickArray.get(right) >= pivot);
-            if (left < right){
+            }
+            if (left <= right){
                 Collections.swap(myQuickArray, left, right);
+//                swapValue(left, right);
+                left++;
+                right--;
             }
         }
         System.out.println("PARTITONED!!");
-        return right;
+        return left;
     }
-    public void recurseHoarQuick(int begin, int end){
+    //recurseHoarQuick
+    public void quickSort(int begin, int end){
         int pIndex = hoarPartition(begin, end);
-        if (begin <= pIndex -1){
-            recurseHoarQuick(begin, pIndex);
+        if (begin < end){
+            quickSort(begin, pIndex);
+            quickSort(pIndex+1, end);
         }
-        if (end > pIndex) {
-            recurseHoarQuick(pIndex+1, end);
-        }
+        System.out.println(Arrays.asList(myQuickArray));
     }
-
 }
