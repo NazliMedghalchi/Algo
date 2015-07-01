@@ -28,27 +28,22 @@ public class Quick {
     }
 //Recursion Hoar QuickSort Algorithm --- In-place
     private int hoarPartition(int initial, int end) {
-        int left = initial-1;
-        int right = +1;
-//        Random rand = new Random();
-//        int pIndex  = rand.nextInt((end - initial)+1) + initial;
-        Integer pivot = myQuickArray.get(end);
-        while (left <= right){
-            while (myQuickArray.get(left) < pivot) {
-                left++;
-            }
+        int left = initial;
+        int right = end-1;
+        Random rand = new Random();
+        int pIndex  = rand.nextInt((end - initial)+1) + initial;
+        Integer pivot = myQuickArray.get(pIndex);
+        while (left < right){
+            if (myQuickArray.get(left) < pivot){
+               left++;
+           }
             if (myQuickArray.get(right) > pivot){
                 right--;
             }
-            if (left <= right){
-                Collections.swap(myQuickArray, left, right);
-//                swapValue(left, right);
-                left++;
-                right--;
-            }
+            Collections.swap(myQuickArray, ++left, --right);
         }
-        System.out.println("PARTITONED!!");
-        return left;
+//        System.out.println("PARTITONED!!");
+        return left++;
     }
     //recurseHoarQuick
     public void quickSort(int begin, int end){
