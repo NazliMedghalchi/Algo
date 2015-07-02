@@ -58,6 +58,7 @@ public class Driver {
             System.out.println("After Quick Sort:");
             Quick myQuick = new Quick(input2);
             myQuick.quickSort(0, input2.length - 1);
+            myQuick.display();
          // Merge Sort
 
     }

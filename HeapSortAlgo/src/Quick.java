@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 /**
@@ -10,30 +11,38 @@ public class Quick {
         for (Integer value : input){
             myQuickArray.add(value);
         }
+
     }
 
     //hoarePartition
     private int hoarePartition(int begin, int end){
-        int left = begin;
-        int right = end-1;
+        int left = begin-1;
+        int right = end+1;
         Integer pivot = myQuickArray.get(end);
-        while (begin < end){
-            while (myQuickArray.get(left) < pivot){
-                left++;
+            while (true){
+                do {
+                    left++;
+                }while (myQuickArray.get(left) < pivot);
+                do{
+                    right--;
+                }while (myQuickArray.get(right) > pivot);
+                if (left < right)
+                    Collections.swap(myQuickArray, left, right);
+                else
+                    return right;
             }
-            while (myQuickArray.get(right) > pivot){
-                right--;
+    }
+    public void display (){
+            for (Integer element : myQuickArray){
+                System.out.print(" "+ element);
             }
-            Collections.swap(myQuickArray, left, right);
-        }
-        return right;
     }
     //QuickSort
     public void quickSort (int initial, int last){
-        int pIndex = hoarePartition(initial, last);
-        while (initial <= pIndex){
+        if (initial < last){
+            int pIndex = hoarePartition(initial, last);
             quickSort(initial, pIndex-1);
-            quickSort(pIndex, last);
+            quickSort(pIndex+1, last);
         }
     }
 }
