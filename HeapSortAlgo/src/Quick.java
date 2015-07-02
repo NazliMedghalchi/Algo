@@ -19,7 +19,7 @@ public class Quick {
         int left = begin-1;
         int right = end+1;
         Integer pivot = myQuickArray.get(end);
-            while (true){
+            while (true){ //Continue till left is not less than right
                 do {
                     left++;
                 }while (myQuickArray.get(left) < pivot);
@@ -32,17 +32,18 @@ public class Quick {
                     return right;
             }
     }
+    //Display sorted array
     public void display (){
             for (Integer element : myQuickArray){
                 System.out.print(" "+ element);
             }
     }
-    //QuickSort
+    //QuickSort - recurse till there is an element in the array
     public void quickSort (int initial, int last){
         if (initial < last){
-            int pIndex = hoarePartition(initial, last);
-            quickSort(initial, pIndex-1);
-            quickSort(pIndex+1, last);
+            int pIndex = hoarePartition(initial, last); //find position for pivot
+            quickSort(initial, pIndex-1); //left-hand side of pivot
+            quickSort(pIndex+1, last); //right-hand side of pivot
         }
     }
 }
