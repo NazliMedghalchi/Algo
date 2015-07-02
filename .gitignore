@@ -1,6 +1,4 @@
-#.idea - ignore folder
-.idea/*
-
-#.iml file
 *.iml
-
+**/*.iml
+./idea/*
+.DS_Store
