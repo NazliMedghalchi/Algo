@@ -14,7 +14,7 @@ public class Driver {
         public static void main(String[] args) {
             System.out.println("hello world");
             int[] input = new int[]{14,15,12,13,20,17,16,11};
-            int[] input2 = new int[]{11,4,2,14,21,32,18};
+            int[] input2 = new int[]{11,4,2,14,21,32,18,11};
 
             // HeapSort
             // Using MinHeap Class pop all elements
@@ -59,7 +59,9 @@ public class Driver {
             Quick myQuick = new Quick(input2);
             myQuick.quickSort(0, input2.length - 1);
             myQuick.display();
+
          // Merge Sort
+            
 
     }
 }

@@ -22,7 +22,7 @@ public class Quick {
             while (true){ //Continue till left is not less than right
                 do {
                     left++;
-                }while (myQuickArray.get(left) < pivot);
+                }while (myQuickArray.get(left) <= pivot);
                 do{
                     right--;
                 }while (myQuickArray.get(right) > pivot);
