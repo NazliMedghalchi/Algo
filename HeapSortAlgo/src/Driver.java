@@ -62,8 +62,9 @@ public class Driver {
             myQuick.display();
 
          // Merge Sort
-            MergeSort myMerge = new MergeSort(input3);
+            mergeSort myMerge = new mergeSort(input3);
             myMerge.sortTD(0,input3.length);
+            myMerge.display();
 
     }
 }
