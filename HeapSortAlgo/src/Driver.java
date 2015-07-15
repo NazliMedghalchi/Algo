@@ -64,6 +64,8 @@ public class Driver {
          // Merge Sort
             mergeSort myMerge = new mergeSort(input3);
             myMerge.sortTD(0,input3.length);
+            //Check result
+            System.out.println("Input to mergeSort: "+ Arrays.toString(input3));
             myMerge.display();
 
     }

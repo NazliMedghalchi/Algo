@@ -37,6 +37,7 @@ public class Quick {
             for (Integer element : myQuickArray){
                 System.out.print(" "+ element);
             }
+        System.out.print("\n");
     }
     //QuickSort - recurse till there is an element in the array
     public void quickSort (int initial, int last){
