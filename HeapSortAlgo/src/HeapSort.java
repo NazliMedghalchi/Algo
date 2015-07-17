@@ -3,6 +3,12 @@ import java.util.*;
 /**
  * Created by Nazli on 2015-06-03.
  */
+/**
+ * HeapSort ALgo:
+ * Get the array
+ * use heap data structure to find min values
+ * print sorted array
+ * */
 public class HeapSort{
     private int[] sortedInput; //added code
     private int[] sort(int[] input) {

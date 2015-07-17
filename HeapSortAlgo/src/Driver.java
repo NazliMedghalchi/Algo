@@ -2,10 +2,24 @@
  * Created by Nazli on 2015-05-13.
  */
 /**
+ * HeapSort ALgo:
  * Get the array
  * use heap data structure to find min values
  * print sorted array
- */
+ * QuickSort:
+ * Pick an element as pivot
+ * Find right place for pivot
+ * Left hand side no element is greater than pivot
+ * Right hand side no element is less than pivot
+ * MergeSort:
+ * Use an auxiliray array to merge elements
+ * Divide the main array into two
+ * Continue till there are two elements to be compared
+ * Merge all smaller arrays into main array
+ * */
+/**
+ * This [Driver] is Client Code
+ * */
 
 import java.util.*;
 
@@ -15,7 +29,7 @@ public class Driver {
             System.out.println("hello world");
             int[] input = new int[]{14,15,12,13,20,17,16,11};
             int[] input2 = new int[]{11,4,2,14,21,32,18,11};
-            int[] input3 = new int[]{12,8,4,2,5,4,10,21};
+            Integer[] input3 = {12,8,4,2,5,3,10,21};
 
             // HeapSort
             // Using MinHeap Class pop all elements
@@ -63,7 +77,7 @@ public class Driver {
 
          // Merge Sort
             mergeSort myMerge = new mergeSort(input3);
-            myMerge.sortTD(0,input3.length);
+            myMerge.sortTD(0, input3.length-1);
             //Check result
             System.out.println("Input to mergeSort: "+ Arrays.toString(input3));
             myMerge.display();

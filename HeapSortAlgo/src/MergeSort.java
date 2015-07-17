@@ -3,18 +3,30 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.lang.Comparable;
-
+import java.lang.*;
 /**
  * Created by Nazli on 2015-07-05.
  */
+/**
+ * MergeSort:
+ * Use an auxiliray array to merge elements
+ * Divide the main array into two
+ * Continue till there are two elements to be compared
+ * Merge all smaller arrays into main array
+ * */
 public class mergeSort {
-    private ArrayList<Integer> mergeArray = new ArrayList<Integer>();
+    private ArrayList<Integer> mergeArray = new ArrayList<>();
+    private ArrayList<Integer> aux = new ArrayList<>();
 
-    public mergeSort(int[] input){
+    public mergeSort(Integer[] input){
         for (int value: input){
             mergeArray.add(value);
         }
+        for (int val : input)
+            aux.add(val);
+
     }
+/*
     private static <T extends Comparable>  boolean  isSorted (T[] array, int f, int l){
         for (int i=f; i < l; i++){
             if (array[i].compareTo(array[i+1]) > 0)
@@ -23,7 +35,7 @@ public class mergeSort {
         return true;
     }
     private static <T extends Comparable> void merge (T[] aux, T[] mergeArrays, int first, int mid, int last){
-        assert  isSorted(mergeArrays, first, mid): true; //Check if left side sorted
+        assert  isSorted(mergeArrays, first, mid); //Check if left side sorted
         assert isSorted (mergeArrays, mid+1, last); //Check if right part is sorted
         int i = first; // left division iterator
         int j = mid+1; // right division iterator
@@ -40,44 +52,42 @@ public class mergeSort {
         while (j > last && i < mid)
             mergeArrays[k++] = aux[i++];
     }
+*/
+
     //Divide and conquer
     private void merge(int first,int middle, int last){
-        int i = first;
-        int j = middle+1;
-        int k  = first;
-        ArrayList<Integer> aux = new ArrayList<Integer>();
-        for (int val : mergeArray)
-            aux.add(val);
-
-        while(i < middle && j < last){
-            if (aux.get(i) <= aux.get(j)) {
-                mergeArray.set(k++, aux.get(i++));
+        int left_itr = first;
+        int right_itr = middle+1;
+        int merge_itr  = first;
+        while(left_itr <= middle && right_itr <= last){
+            if (aux.get(left_itr) <= aux.get(right_itr)) {
+                mergeArray.set(merge_itr++, aux.get(left_itr++));
             }
             else {
-                mergeArray.set(k++, aux.get(j++));
+                mergeArray.set(merge_itr++, aux.get(right_itr++));
             }
 
         }
-        if (i > middle && j < last) {
-            mergeArray.set(k++, aux.get(j++));
+        while ( left_itr <= middle){
+            mergeArray.set(merge_itr++, aux.get(left_itr++));
         }
-        if (j > last && i < middle){
-            mergeArray.set(k++, aux.get(i++));
+        //copy remained element of left half
+        while (right_itr <= last) {
+            mergeArray.set(merge_itr++, aux.get(right_itr++));
         }
-
     }
     public void display(){
-
         System.out.println("MergeSort:" + mergeArray.toString());
     }
+
     // Top-down mergeSort
     public void sortTD(int begin , int end){
         if (begin < end){
-            int mid = (begin + end)/2;
+            int mid =  (end + begin) / 2;
             sortTD(begin, mid);
             sortTD(mid + 1, end);
             merge(begin, mid, end);
-            mergeSort.<int> merge(mergeArray, mergeArray, begin, end);
+//            merge(aux, mergeArray, begin, end);
         }
     }
 

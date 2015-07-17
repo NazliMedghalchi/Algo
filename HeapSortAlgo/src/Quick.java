@@ -5,6 +5,13 @@ import java.util.Collections;
 /**
  * Created by Nazli on 2015-07-02.
  */
+/**
+ * QuickSort:
+ * Pick an element as pivot
+ * Find right place for pivot
+ * Left hand side no element is greater than pivot
+ * Right hand side no element is less than pivot
+ * */
 public class Quick {
     ArrayList<Integer> myQuickArray = new ArrayList<Integer>();
     public Quick (int[] input){
