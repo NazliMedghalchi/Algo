@@ -1,6 +1,7 @@
 *.iml
 .idea/
 *.iws
+*.xml
 **/*.iml
 ./idea/*
 .DS_Store

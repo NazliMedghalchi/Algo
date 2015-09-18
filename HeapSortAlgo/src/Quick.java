@@ -26,7 +26,7 @@ public class Quick {
         int left = begin-1;
         int right = end+1;
         Integer pivot = myQuickArray.get(end);
-            while (true){ //Continue till left is not less than right
+            while (true){ //Continue till left is less than right
                 do {
                     left++;
                 }while (myQuickArray.get(left) <= pivot);

@@ -12,7 +12,7 @@
  * Left hand side no element is greater than pivot
  * Right hand side no element is less than pivot
  * MergeSort:
- * Use an auxiliray array to merge elements
+ * Use an auxiliary array to merge elements
  * Divide the main array into two
  * Continue till there are two elements to be compared
  * Merge all smaller arrays into main array
@@ -28,13 +28,15 @@ public class Driver {
         public static void main(String[] args) {
             System.out.println("hello world");
             int[] input = new int[]{14,15,12,13,20,17,16,11};
-            int[] input2 = new int[]{11,4,2,14,21,32,18,11};
-            Integer[] input3 = {12,8,4,2,5,3,10,21};
+            int[] input2 = {11,4,2,14,21,32,18,11};
+            Integer[] input3 = {7,6,5,4,3,2,1};
+            ArrayList<Integer> input4 = new ArrayList<>(Arrays.asList(14, 21, 3, 12, 28, 9, 6, 22, 15, 17, 13, 23));
 
             // HeapSort
             // Using MinHeap Class pop all elements
             // Use non static method w/defined obj of the class Driver
             MinHeap myHeap = new MinHeap(input);
+//            System.out.println(HeapSort.sort(input2));
             myHeap.insertToHeap(30);
             myHeap.insertToHeap(21);
             myHeap.insertToHeap(9);
@@ -81,6 +83,11 @@ public class Driver {
             //Check result
             System.out.println("Input to mergeSort: "+ Arrays.toString(input3));
             myMerge.display();
+
+            //BucketSort
+            BucketSort bucket = new BucketSort(input2, 5);
+            bucket.sort(0);
+            bucket.display();
 
     }
 }

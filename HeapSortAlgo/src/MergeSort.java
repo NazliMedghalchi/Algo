@@ -62,17 +62,18 @@ public class mergeSort {
         while(left_itr <= middle && right_itr <= last){
             if (aux.get(left_itr) <= aux.get(right_itr)) {
                 mergeArray.set(merge_itr++, aux.get(left_itr++));
+                right_itr++;
             }
             else {
                 mergeArray.set(merge_itr++, aux.get(right_itr++));
+                left_itr++;
             }
-
         }
-        while ( left_itr <= middle){
+        while ( (left_itr > middle) && (right_itr <= last)){
             mergeArray.set(merge_itr++, aux.get(left_itr++));
         }
         //copy remained element of left half
-        while (right_itr <= last) {
+        while ((right_itr > last) && (left_itr < middle)) {
             mergeArray.set(merge_itr++, aux.get(right_itr++));
         }
     }
@@ -82,13 +83,12 @@ public class mergeSort {
 
     // Top-down mergeSort
     public void sortTD(int begin , int end){
+        int mid = (end + begin)/2;
         if (begin < end){
-            int mid =  (end + begin) / 2;
             sortTD(begin, mid);
             sortTD(mid + 1, end);
             merge(begin, mid, end);
 //            merge(aux, mergeArray, begin, end);
         }
     }
-
 }
