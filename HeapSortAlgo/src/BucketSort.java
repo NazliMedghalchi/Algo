@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+
 /**
  * Created by Nazli on 2015-09-15.
  * Pseudocode:
@@ -30,8 +31,8 @@ public class BucketSort {
     public void display(){
 
         System.out.println("Sorted Bucket:");
-        for (Integer num : inputArray)
-            System.out.println(num);
+        for (Integer num : arrayOfBuckets)
+            System.out.println(arrayOfBuckets.get(num));
     }
     public BucketSort(int[] input, int BNumber){
         //Make buckets
@@ -44,7 +45,15 @@ public class BucketSort {
         for (int i = 0; i <=input.length; i++) {
             arrayOfBuckets = new ArrayList<Integer>(bucketSize);
         }
-        for (Integer val : inputArray)
-            arrayOfBuckets[(input[val]-min)/bucketRange].add(input[val]);
+        // Assign values into buckets
+        for (Integer val : inputArray){
+            arrayOfBuckets.set(val, (val-min)/bucketRange);
+        }
+        //Sort with HeapSort()
+//        int [] sortBucket = new int[arrayOfBuckets.size()];
+//        HeapSort heapBucket = new HeapSort();
+//        sortBucket = heapBucket.HeapSort(sortBucket);
+//        for (int val : sortBucket)
+//            arrayOfBuckets.set(val, sortBucket[val]);
     }
 }
