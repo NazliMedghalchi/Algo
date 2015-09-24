@@ -89,5 +89,9 @@ public class Driver {
             bucket.sort(0);
             bucket.display();
 
+            //StableMarriage
+            StableMarriage makeStable = new StableMarriage();
+            makeStable()
+
     }
 }
