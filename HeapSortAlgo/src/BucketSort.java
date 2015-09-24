@@ -34,6 +34,7 @@ public class BucketSort {
         for (Integer num : arrayOfBuckets)
             System.out.println(arrayOfBuckets.get(num));
     }
+
     public BucketSort(int[] input, int BNumber){
         //Make buckets
         for (int value : input){
