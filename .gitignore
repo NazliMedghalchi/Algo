@@ -1,0 +1,11 @@
+#intellij file
+*.iml
+*.iws
+*.ipr
+.idea/
+
+*.xml
+**/*.iml
+.DS_Store
+# Java class files
+*.class
