@@ -27,15 +27,20 @@ public class CrackingHashTable {
     }
 
 // Cracking the Coding Interviews - Chapter 1
-    public boolean UniqueChars(char[] in){
+    // Question 1.1
+    public boolean UniqueChars(String in){
         // without extra data structure
         int count = 0;
-        for (char ch : in){
-            if (ch < 65 || ch > 90 || ch < 97 || ch > 122)
+        char lasyUnique;
+        for (int i=0; i<in.length(); i++){
+            if (in.charAt(i) < 65 || in.charAt(i) > 90 || in.charAt(i) < 97
+                    || in.charAt(i) > 122){
                 count ++;
-            if ((ch>=48 && ch<=57))
+                lasyUnique = in.charAt(i);
+            }
+            if ((in.charAt(i)>=48 && in.charAt(i)<=57))
                 count --;
-            if ((ch == ch+1))
+            if ((in.charAt(i) == in.charAt(i)+1))
                 return true;
         }
         return false;
@@ -51,5 +56,13 @@ public class CrackingHashTable {
             checkedChars[val] = true;
         }
         return true;
+    }
+//    Question 1.2
+    public String reverse(String str){
+        String reversed = "";
+        for (int i=str.length()-1; i>=0; i--){
+            reversed += String.valueOf(str.charAt(i));
+        }
+        return reversed;
     }
 }

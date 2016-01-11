@@ -106,5 +106,7 @@ public class Driver {
             System.out.println(crack.uniqueChars2(findUniques));
             System.out.println(crack.uniqueChars2(noUnique));
 
+            String reversing = "abcd";
+            System.out.println(crack.reverse(reversing));
         }
 }
