@@ -17,11 +17,11 @@ public class StableMarriage {
 
 
         //Applying for companies
-        while(applicants==null && isMatchingFull==false)
-        {
-
-
-        }
+//        while(applicants==null && isMatchingFull==false)
+//        {
+//
+//
+//        }
         return orderingA;
     }
     //check if stableMatch is all full or not
@@ -32,6 +32,9 @@ public class StableMarriage {
             return false;
         }
     }
+    public void makeStable(){
+
+    }
     public StableMarriage(ArrayList<Integer> applicant, ArrayList<Integer> inputCompany){
         // Free all array members
         for (int val=0; val<= applicants.size() ||
@@ -41,4 +44,3 @@ public class StableMarriage {
         }
     }
     }
-}

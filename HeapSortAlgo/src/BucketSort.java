@@ -29,7 +29,6 @@ public class BucketSort {
     }
     //display results of Bucket Sort
     public void display(){
-
         System.out.println("Sorted Bucket:");
         for (Integer num : arrayOfBuckets)
             System.out.println(arrayOfBuckets.get(num));
@@ -39,7 +38,7 @@ public class BucketSort {
         //Make buckets
         for (int value : input){
             if (value > max) max = input[value];
-            else if (value < min) min = input[value];
+            else if (value <= min) min = input[value];
         }
         int bucketRange = (max-min)+1;
         bucketSize = bucketRange/BNumber;

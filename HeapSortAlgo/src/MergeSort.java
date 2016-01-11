@@ -15,8 +15,8 @@ import java.lang.*;
  * Merge all smaller arrays into main array
  * */
 public class mergeSort {
-    private ArrayList<Integer> mergeArray = new ArrayList<>();
-    private ArrayList<Integer> aux = new ArrayList<>();
+    private ArrayList<Integer> mergeArray = new ArrayList<Integer>();
+    private ArrayList<Integer> aux = new ArrayList<Integer>();
 
     public mergeSort(Integer[] input){
         for (int value: input){

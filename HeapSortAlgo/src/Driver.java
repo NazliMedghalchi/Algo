@@ -30,7 +30,7 @@ public class Driver {
             int[] input = new int[]{14,15,12,13,20,17,16,11};
             int[] input2 = {11,4,2,14,21,32,18,11};
             Integer[] input3 = {7,6,5,4,3,2,1};
-            ArrayList<Integer> input4 = new ArrayList<>(Arrays.asList(14, 21, 3, 12, 28, 9, 6, 22, 15, 17, 13, 23));
+            ArrayList<Integer> input4 = new ArrayList<Integer>(Arrays.asList(14, 21, 3, 12, 28, 9, 6, 22, 15, 17, 13, 23));
 
             // HeapSort
             // Using MinHeap Class pop all elements
@@ -85,13 +85,26 @@ public class Driver {
             myMerge.display();
 
             //BucketSort
-            BucketSort bucket = new BucketSort(input2, 5);
-            bucket.sort(0);
-            bucket.display();
 
-            //StableMarriage
-            StableMarriage makeStable = new StableMarriage();
-            makeStable()
+//            //StableMarriage
+//            ArrayList<Integer> applicant = new ArrayList<Integer>(4, 5, 3, 9, 1, 10);
+//            Integer company = {10, 1, 5, 4, 9, 3};
+//            StableMarriage makeStable = new StableMarriage(applicant, company);
+//            makeStable(applicant, company);
 
-    }
+            // Binary tree
+//            int[] inTree = new int[]{4,3,10,2,11,1,8};
+//            BinaryTree binaryTree = new BinaryTree(inTree);
+//            binaryTree.binarySearch();
+
+            CrackingHashTable crack = new CrackingHashTable();
+            String[] words = new String[]{"Cracking ", "Coding ", "Interview ", "questions "};
+            System.out.println(crack.makeSentence(words));
+
+            String findUniques = "!@#$%^&*";
+            String noUnique = "ASDADASDA";
+            System.out.println(crack.uniqueChars2(findUniques));
+            System.out.println(crack.uniqueChars2(noUnique));
+
+        }
 }

@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class MinHeap {
-        private ArrayList<Integer> myArrayList = new ArrayList<Integer>(Arrays.asList());
+        private ArrayList<Integer> myArrayList = new ArrayList(Arrays.asList());
 //        private int maxSize;
 //        private int currentSize;
 
